@@ -3,7 +3,7 @@ import React, {Component} from "react";
 class HomeHeader extends Component {
     render() {
         return (
-            <section className="header">
+            <section className="header container">
                 <ul className="header__ul">
                     <li className="header__logreg"><a href="/">Zaloguj</a></li>
                     <li className="header__logreg"><a href="/">Załóż konto</a></li>
