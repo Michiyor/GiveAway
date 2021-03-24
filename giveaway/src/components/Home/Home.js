@@ -1,23 +1,15 @@
-import React, {Component} from "react";
+import React from "react";
+import HomeHero from "./HomeHero";
+import HomeHeader from "./HomeHeader";
 
-class Home extends Component {
-    render() {
-        return (
-            <section className="header">
-                <ul className="header__ul">
-                    <li className="header__logreg"><a href="/">Zaloguj</a></li>
-                    <li className="header__logreg"><a href="/">Załóż konto</a></li>
-                </ul>
-                <ul className="header__ul list" id="menu">
-                    <li className="header__menu">Start</li>
-                    <li className="header__menu">O co chodzi?</li>
-                    <li className="header__menu">O nas</li>
-                    <li className="header__menu">Fundacja i organizacje</li>
-                    <li className="header__menu">Kontakt</li>
-                </ul>
-            </section>
-        );
-    }
+function Home() {
+    return (
+        <div className="home">
+            <HomeHeader/>
+            <HomeHero/>
+        </div>
+    );
+
 }
 
 export default Home;

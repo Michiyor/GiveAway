@@ -10,7 +10,9 @@ import Home from "./components/Home/Home";
 function App() {
   return (
     <Router>
-      <Home/>
+        <div className="all container">
+            <Home/>
+        </div>
     </Router>
 
   );
