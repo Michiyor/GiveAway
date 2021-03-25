@@ -7,7 +7,7 @@ import recycle from "./../../assets/Icon-4.svg";
 function HomeFourSteps() {
     return (
         <section className="homeFourSteps" id="fourSteps">
-            <h2 className="fourSteps__title">Wystarczą 4 proste kroki</h2>
+            <h2 className="title">Wystarczą 4 proste kroki</h2>
             <div className="fourSteps__paragraphs">
                 <div className="fourSteps__column">
                     <img src={tshirt} alt="tshirt" className="fourSteps__img"/>
