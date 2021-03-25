@@ -54,7 +54,7 @@
   background-position: bottom;
 }
 .hero__list{
-  padding: 9em 1em 0 1em;
+  padding: 8em 1em 0 0;
   display: flex;
   list-style: none;
   font-size: 36px;
@@ -64,9 +64,11 @@
 .hero__link{
   text-align: center;
   text-decoration: none;
-  //border: 1px solid $color-words;
   color: $color-words;
   opacity: 1;
+  margin: 1em;
+  width: 310px;
+  height: 120px;
 }
 .threeCol{
   max-height: 384px;
@@ -89,4 +91,46 @@
 .threeCol__text{
   font-size: 16px;
   margin-bottom: 86px;
+}
+.homeFourSteps{
+  text-align: center;
+}
+.fourSteps__title{
+  background-image:  url("./../../assets/Decoration.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding: 0.5em 0 1.5em;
+  font-size: 38px;
+}
+.fourSteps__paragraphs{
+  display: flex;
+  justify-content: space-around;
+  background-color: $color-background-section;
+  padding: 2em;
+}
+.fourSteps__column{
+  padding: 0 3em;
+}
+.fourSteps__img{
+  width: 83px;
+  height: 83px;
+
+}
+.fourSteps__subtitle{
+  font-size: 18px;
+  border-bottom: 1px solid $color-bck-msg;
+  padding: 1em;
+}
+.fourSteps__text{
+  font-size: 16px;
+}
+.fourSteps__btn{
+text-align: center;
+  font-size: 36px;
+}
+.btn{
+  width: 310px;
+  height: 120px;
+  color: $color-words;
+  opacity: 1;
 }
