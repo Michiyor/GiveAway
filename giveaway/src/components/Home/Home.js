@@ -17,7 +17,6 @@ function Home() {
             <HomeHelp/>
         </div>
     );
-
 }
 
 export default Home;
