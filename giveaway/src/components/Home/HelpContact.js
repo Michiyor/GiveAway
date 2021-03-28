@@ -7,3 +7,5 @@ function HelpContact() {
         </section>
     )
 }
+
+export default HelpContact;
