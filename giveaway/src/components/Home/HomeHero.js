@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import imageHero from "./../../assets/Home-Hero-Image.jpg"
+import {Link} from "react-router-dom";
 
 class HomeHero extends Component {
     render() {
@@ -10,8 +11,8 @@ class HomeHero extends Component {
                     <h1 className="hero__title">Zacznij pomagać! <br/>
                         Oddaj niechciane rzeczy w zaufane ręce</h1>
                     <ul className="hero__list">
-                        <li ><button href="/" className="hero__link">ODDAJ <br/> RZECZY</button></li>
-                        <li ><button href="/" className="hero__link">ZORGANIZUJ ZBIÓRKĘ</button></li>
+                        <li className="link" ><Link to="/login" className="hero__link">ODDAJ RZECZY</Link></li>
+                        <li className="link" ><Link to="/login" className="hero__link">ZORGANIZUJ ZBIÓRKĘ</Link></li>
                     </ul>
                 </div>
             </section>

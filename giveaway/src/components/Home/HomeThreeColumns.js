@@ -3,7 +3,7 @@ import React, {Component} from "react";
 class HomeThreeColumns extends Component {
     render() {
         return (
-            <section className="threeCol">
+            <section className="threeCol" id="threeColumns">
            <div className="threeCol__column">
                <h2 className="threeCol__title">10</h2>
                <h3 className="threeCol__subtitle">ODDANYCH WORKÓW</h3>

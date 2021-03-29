@@ -31,9 +31,10 @@ const HomeContact = () => {
             <section className="homeContact" id="contact">
             <form className="contact__form" onSubmit={handleSubmit}>
                 <h3 className="title">Skontaktuj się z nami</h3>
-                <label Wpisz swoje imię/>
+                <label> Wpisz swoje imię</label>
                 <input  type="text" name="name" value={name.name} onChange={handleChange} />
                 <input type="text" name="email" value={email.name} onChange={handleChangeEmail}/>
+                <textarea />
                 <input type="submit" value="Wyślij"/>
             </form>
             </section>

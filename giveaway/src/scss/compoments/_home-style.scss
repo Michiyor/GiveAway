@@ -34,6 +34,7 @@
 
 .home__hero {
   display: flex;
+  height: 100vh;
 }
 
 .hero__img {
@@ -41,6 +42,7 @@
   width: 50%;
   height: 30em;
   border-radius: 8px;
+  opacity: 90%;
 }
 
 .hero__title {
@@ -59,20 +61,26 @@
   display: flex;
   list-style: none;
   font-size: 36px;
-  text-align: center;
 }
 
-.hero__link {
-  text-align: center;
-  text-decoration: none;
+.link{
+  border: 1px solid $color-words;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: $color-words;
   opacity: 1;
-  margin: 1em;
-  width: 310px;
+  margin: 0.5em;
+  width: 290px;
   height: 120px;
   border-radius: 5px;
   box-shadow: 0 6.8px 76.6px -20px rgba(0, 0, 0, 0.129),
   0 95px 193px -20px rgba(0, 0, 0, 0.26);
+}
+.hero__link {
+  text-align: center;
+  text-decoration: none;
+
 }
 
 .threeCol {
@@ -225,14 +233,33 @@
 }
 
 .homeContact {
-  height: 100vh;
   margin: 2em;
   display: flex;
-  background-image: url("./../../assets/._Background-Contact-Form.jpg");
+  background-image: url("./../../assets/Background-Contact-Form.jpg");
   background-position: left;
-  background-repeat: no-repeat ;
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact__form {
 
+}
+
+.homeFooter {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.footer__title {
+  position: absolute;
+  font-size: 18px;
+}
+
+.icon {
+  left: 30em;
+  top: 1em;
+  padding-left: 1em;
+  position: relative;
 }
