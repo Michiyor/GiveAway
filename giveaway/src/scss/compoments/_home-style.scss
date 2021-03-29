@@ -57,13 +57,13 @@
 }
 
 .hero__list {
-  padding: 8em 1em 0 0;
+  padding: 8em 0.5em 0 0;
   display: flex;
   list-style: none;
   font-size: 36px;
 }
 
-.link{
+.link {
   border: 1px solid $color-words;
   display: flex;
   justify-content: center;
@@ -77,6 +77,7 @@
   box-shadow: 0 6.8px 76.6px -20px rgba(0, 0, 0, 0.129),
   0 95px 193px -20px rgba(0, 0, 0, 0.26);
 }
+
 .hero__link {
   text-align: center;
   text-decoration: none;
@@ -157,13 +158,10 @@
 }
 
 .btn {
-  width: 310px;
-  height: 120px;
-  color: $color-words;
-  opacity: 1;
-  border-radius: 5px;
-  box-shadow: 0 6.8px 76.6px -20px rgba(0, 0, 0, 0.129),
-  0 95px 193px -20px rgba(0, 0, 0, 0.26);
+  list-style: none;
+  text-align: center;
+  display: inline-flex;
+  text-decoration: none;
 }
 
 .homeAboutUs {
