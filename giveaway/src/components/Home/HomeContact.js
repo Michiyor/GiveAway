@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
+import blankets from "./../../assets/Background-Contact-Form.jpg"
 
 const HomeContact = () => {
-    const [name, setName] = useState({ name: ""});
+    const [name, setName] = useState({name: ""});
     const [email, setEmail] = useState({email: ""});
 
     const handleChange = (e) => {
@@ -29,14 +30,19 @@ const HomeContact = () => {
     return (
         <>
             <section className="homeContact" id="contact">
-            <form className="contact__form" onSubmit={handleSubmit}>
-                <h3 className="title">Skontaktuj się z nami</h3>
-                <label> Wpisz swoje imię</label>
-                <input  type="text" name="name" value={name.name} onChange={handleChange} />
-                <input type="text" name="email" value={email.name} onChange={handleChangeEmail}/>
-                <textarea />
-                <input type="submit" value="Wyślij"/>
-            </form>
+                <div className="contact__picture">
+                    <img className="image contact__image" src={blankets} alt="blanket"/>
+                </div>
+                <form className="contact__form" onSubmit={handleSubmit}>
+                    <h3 className="title">Skontaktuj się z nami</h3>
+                    <label> Wpisz swoje imię</label>
+                    <input type="text" name="name" value={name.name} onChange={handleChange}/>
+                    <label>Wpisz swojego emaila</label>
+                    <input type="text" name="email" value={email.name} onChange={handleChangeEmail}/>
+                    <label>Wpisz swoją wiadomość</label>
+                    <textarea cols="50" rows="4">.</textarea>
+                    <input type="submit" value="Wyślij"/>
+                </form>
             </section>
         </>
     );

@@ -167,7 +167,6 @@
 .homeAboutUs {
   display: flex;
   height: 100vh;
-  background-color: $color-background-section;
   justify-content: center;
   align-items: center;
   overflow: hidden;
@@ -260,4 +259,13 @@
   top: 1em;
   padding-left: 1em;
   position: relative;
+}
+
+.contact__picture{
+  width: 50vw;
+}
+
+.contact__image{
+  opacity: 20%;
+
 }
