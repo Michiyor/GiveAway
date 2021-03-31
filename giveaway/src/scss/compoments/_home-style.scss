@@ -232,17 +232,28 @@
 .homeContact {
   margin: 2em;
   display: flex;
-  background-image: url("./../../assets/Background-Contact-Form.jpg");
   background-position: left;
   background-repeat: no-repeat;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+}
+
+.contact__main {
+  background-color: rgba(255,255,255,0.5);
+  height: 100%;
 }
 
 .contact__form {
-
+}
+.contact__picture{
+  width: 50vw;
 }
 
+.contact__image{
+  opacity: 20%;
+
+}
 .homeFooter {
   display: flex;
   text-align: center;
@@ -261,11 +272,3 @@
   position: relative;
 }
 
-.contact__picture{
-  width: 50vw;
-}
-
-.contact__image{
-  opacity: 20%;
-
-}
