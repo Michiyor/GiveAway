@@ -27,6 +27,7 @@ const HomeContact = () => {
         e.preventDefault();
         console.log(name);
     };
+
     return (
         <>
             <section className="homeContact" id="contact" style={{backgroundImage: `url(${blankets})`}}>
@@ -45,7 +46,7 @@ const HomeContact = () => {
                             placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
                             cols="50" rows="6">
                     </textarea>
-                        <input className="contact__btn" type="submit" value="Wyślij"/>
+                        <input className="contact__btn" type="submit" id="validate" value="Wyślij"/>
                     </form>
                 </div>
             </section>

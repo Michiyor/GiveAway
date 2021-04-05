@@ -15,7 +15,18 @@ class HomeHeader extends Component {
                     </li>
                 </ul>
                 <ul className="header__ul list" id="menu">
-                    <li className="header__menu" >Start</li>
+                    <li className="header__menu" >
+                        <ScrollLink activeClass="active"
+                                    to="hero"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={0}
+                                    duration={500}
+                                    delay={1000}
+                        >
+                            Start
+                        </ScrollLink>
+                    </li>
                     <li className="header__menu">
                         <ScrollLink activeClass="active"
                               to="threeColumns"

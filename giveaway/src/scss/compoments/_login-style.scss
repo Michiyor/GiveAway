@@ -1,0 +1,26 @@
+.login{
+  text-align: center;
+  display: block;
+}
+
+.login__el{
+  border: none;
+  border-bottom: 2px solid $color-words;
+}
+
+.login__ul{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.login__logreg{
+  text-decoration: none;
+  list-style: none;
+  text-align: center;
+  width: 150px;
+  height: 50px;
+  color: $color-words;
+  border: 1px solid $color-words;
+}
