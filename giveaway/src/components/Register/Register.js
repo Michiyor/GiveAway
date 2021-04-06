@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import HomeHeader from "../Home/HomeHeader";
 import {Link} from "react-router-dom";
 
-function  Register(){
+function Register() {
     const [email, setEmail] = useState({email: ""});
 
     const handleChangeEmailLogin = (e) => {
@@ -19,23 +19,24 @@ function  Register(){
         e.preventDefault();
         console.log(email);
     };
-    return(
+    return (
         <>
-        <HomeHeader/>
-        <section className="register" id="register">
-            <h2 className="title">Załóż konto</h2>
-            <div className="register__main">
-                <form className="pages__form" onSubmit={handleSubmit}>
-                    <label className="contact__msg-label" htmlFor="email">Wpisz swojego emaila </label>
-                    <input className="login__el" id="email" placeholder="jan.nowak@gmail.com" type="text"
-                           name="email" value={email.name}
-                           onChange={handleChangeEmailLogin}/>
-                    <label className="contact__msg-label" htmlFor="passsword">Wpisz swoje hasło</label>
-                    <input type="password" id="password" className="login__el">
-                    </input>
-                    <label className="contact__msg-label" htmlFor="repeat-passsword">Powtórz hasło</label>
-                    <input type="password" id="repeat-password" className="login__el">
-                    </input>
+            <HomeHeader/>
+            <section className="register" id="register">
+                <h2 className="title">Załóż konto</h2>
+                <div className="register__main">
+                    <form className="pages__form" onSubmit={handleSubmit}>
+                        <label className="contact__msg-label" htmlFor="email">Wpisz swojego emaila </label>
+                        <input className="login__el" id="email" placeholder="jan.nowak@gmail.com" type="text"
+                               name="email" value={email.name}
+                               onChange={handleChangeEmailLogin}/>
+                        <label className="contact__msg-label" htmlFor="passsword">Wpisz swoje hasło</label>
+                        <input type="password" id="password" className="login__el">
+                        </input>
+                        <label className="contact__msg-label" htmlFor="repeat-passsword">Powtórz hasło</label>
+                        <input type="password" id="repeat-password" className="login__el">
+                        </input>
+                    </form>
                     <ul className="login__ul">
                         <li className="login__logreg">
                             <Link to="/login">Zaloguj</Link>
@@ -44,9 +45,9 @@ function  Register(){
                             <Link to="/register">Załóż konto</Link>
                         </li>
                     </ul>
-                </form>
-            </div>
-        </section>
+
+                </div>
+            </section>
         </>
     )
 }

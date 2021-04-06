@@ -34,6 +34,7 @@ function Login() {
                         <label className="contact__msg-label" htmlFor="passsword">Wpisz swoje hasło</label>
                         <input type="password" id="password" className="login__el">
                         </input>
+                    </form>
                         <ul className="login__ul">
                             <li className="login__logreg">
                                 <Link to="/register">Załóż konto</Link>
@@ -42,7 +43,7 @@ function Login() {
                                 <Link to="/login">Zaloguj</Link>
                             </li>
                         </ul>
-                    </form>
+
                 </div>
             </section>
         </>
