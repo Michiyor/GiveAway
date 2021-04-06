@@ -230,7 +230,7 @@
 }
 
 .homeContact {
-  margin: 0 8em 0 1em;
+  margin: 0 12em 0 1em;
   display: flex;
   background-position: top;
   background-repeat: no-repeat;
@@ -251,35 +251,37 @@
 .contact__form {
 
 }
-.contact__labels{
+
+.contact__labels {
   display: block;
 }
-.label{
+
+.label {
   display: inline-flex;
   padding: 0 2em;
   justify-content: flex-end;
 }
 
-.contact__el{
+.contact__el {
   display: inline-flex;
   border: none;
   border-bottom: 2px solid $color-words;
   margin: 0.5em;
 }
 
-.contact__msg-label{
+.contact__msg-label {
   display: block;
   margin: 1em;
 }
 
-.contact__msg{
+.contact__msg {
   display: block;
   margin: 1em;
   border: none;
   border-bottom: 2px solid $color-words;
 }
 
-.contact__btn{
+.contact__btn {
   text-align: center;
   width: 150px;
   height: 50px;

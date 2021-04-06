@@ -32,8 +32,7 @@ function Login() {
                                name="email" value={email.name}
                                onChange={handleChangeEmailLogin}/>
                         <label className="contact__msg-label" htmlFor="passsword">Wpisz swoje hasło</label>
-                        <input id="password" className="login__el"
-                               placeholder="Wpisz swoje hasło">
+                        <input type="password" id="password" className="login__el">
                         </input>
                         <ul className="login__ul">
                             <li className="login__logreg">
