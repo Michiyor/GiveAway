@@ -2,8 +2,9 @@ import React, {useState} from 'react';
 import blankets from "./../../assets/Background-Contact-Form.jpg"
 
 const HomeContact = () => {
-    const [name, setName] = useState({name: ""});
-    const [email, setEmail] = useState({email: ""});
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
 
     const handleChange = (e) => {
         const {name, value} = e.target;
@@ -25,14 +26,31 @@ const HomeContact = () => {
     };
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(name);
+        fetch("https://fer-api.coderslab.pl/v1/portfolio/contact",
+        {
+                method: "POST",
+                body: JSON.stringify({
+                    name: "Test",
+                    email: "test@wp.pl",
+                    message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor " +
+                        "incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud " +
+                        "exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                }),
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            }
+        )
+            .then(res => res.json())
+            .then(res => console.log(res))
+            .catch(err => console.log(err))
     };
 
     return (
         <>
             <section className="homeContact" id="contact" style={{backgroundImage: `url(${blankets})`}}>
                 <div className="contact__main">
-                    <form className="contact__form" onSubmit={handleSubmit}>
+                    <form className="contact__form" onSubmit={(e) => handleSubmit(e)}>
                         <h3 className="title">Skontaktuj się z nami</h3>
                         <div className="contact__labels">
                             <label className=" label" htmlFor="name"> Wpisz swoje imię</label>
@@ -42,11 +60,21 @@ const HomeContact = () => {
                         <input className="contact__el" id="email" placeholder="jan.nowak@gmail.com" type="text" name="email" value={email.name}
                                onChange={handleChangeEmail}/>
                         <label className="contact__msg-label" htmlFor="msg">Wpisz swoją wiadomość</label>
-                        <textarea id="msg" className="contact__msg"
-                            placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-                            cols="50" rows="6">
+                        <textarea
+                            id="msg"
+                            className="contact__msg"
+                            placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                             exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                            cols="50"
+                            rows="6">
                     </textarea>
-                        <input className="contact__btn" type="submit" id="validate" value="Wyślij"/>
+                        <input
+                            className="contact__btn"
+                            type="submit"
+                            id="validate"
+                            value="Wyślij"
+                        />
                     </form>
                 </div>
             </section>
