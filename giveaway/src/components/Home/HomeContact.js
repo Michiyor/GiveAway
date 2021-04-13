@@ -4,7 +4,7 @@ import blankets from "./../../assets/Background-Contact-Form.jpg"
 const HomeContact = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
-    const [message, setMessage] = useState("");
+    const [msg, setMsg] = useState("");
 
     const handleChange = (e) => {
         const {name, value} = e.target;
@@ -23,7 +23,16 @@ const HomeContact = () => {
                 [email]: value
             }
         });
+    };const handleChangeMsg = (e) => {
+        const {msg, value} = e.target;
+        setMsg(prevState => {
+            return {
+                ...prevState,
+                [msg]: value
+            }
+        });
     };
+
     const handleSubmit = (e) => {
         e.preventDefault();
         fetch("https://fer-api.coderslab.pl/v1/portfolio/contact",
@@ -53,14 +62,16 @@ const HomeContact = () => {
                     <form className="contact__form" onSubmit={(e) => handleSubmit(e)}>
                         <h3 className="title">Skontaktuj się z nami</h3>
                         <div className="contact__labels">
-                            <label className=" label" htmlFor="name"> Wpisz swoje imię</label>
-                            <label className=" label" htmlFor="email">Wpisz swojego emaila </label>
+                            <label className="label" htmlFor="name"> Wpisz swoje imię</label>
+                            <label className="label" htmlFor="email">Wpisz swojego emaila </label>
                         </div>
                         <input className="contact__el" id="name" placeholder="Jan" type="text" name="name" value={name.name} onChange={handleChange}/>
                         <input className="contact__el" id="email" placeholder="jan.nowak@gmail.com" type="text" name="email" value={email.name}
                                onChange={handleChangeEmail}/>
                         <label className="contact__msg-label" htmlFor="msg">Wpisz swoją wiadomość</label>
                         <textarea
+                            onChange={handleChangeMsg}
+                            value={msg.name}
                             id="msg"
                             className="contact__msg"
                             placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
